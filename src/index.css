@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Fraunces", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+
+  --color-brand-green: #173824;
+  --color-brand-green-dark: #0e2215;
+  --color-brand-green-light: #1f472e;
+  --color-brand-cream: #f3efe6;
+  --color-brand-cream-card: #fbf9f5;
+  --color-brand-amber: #cf9338;
+  --color-brand-amber-hover: #b87e28;
+  --color-brand-sage: #5f7d6a;
+  --color-brand-ochre: #b28731;
+  --color-brand-khaki: #9c8b5e;
+  --color-brand-tan: #8e8055;
+  --color-brand-olive: #4e6538;
+  --color-brand-charcoal: #232724;
+  --color-brand-rust: #9e5c24;
+  --color-brand-petrol: #284e5a;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    background-color: #f3efe6;
+    color: #1c1c1c;
+  }
+
+  body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom dashed outline for client logo placeholders as specified in mockup */
+.logo-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 0.375rem;
+  border: 1px dashed rgba(160, 155, 145, 0.7);
+  background-color: rgba(255, 255, 255, 0.75);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #383530;
+  text-transform: uppercase;
+  backdrop-filter: blur(4px);
+}
+
+.logo-badge-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 0.375rem;
+  border: 1px dashed rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.06);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #e2ded5;
+  text-transform: uppercase;
+}
