@@ -49,9 +49,6 @@ export default function Hero() {
 
           {/* Hero image slot label matching mockup */}
           <div className="pt-4 border-t border-white/15 inline-block">
-            <p className="text-xs font-mono text-neutral-300/80 tracking-wide">
-              Hero image slot: replace this background with /assets/images/hero.jpg
-            </p>
           </div>
         </div>
       </div>
