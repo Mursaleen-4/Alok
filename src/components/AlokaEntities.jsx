@@ -81,42 +81,36 @@ export default function AlokaEntities({ onSelectCommodity }) {
             </div>
           </div>
 
-          {/* Right Visual Card with HD Photo */}
+          {/* Right Visual Card with Clear HD Photo */}
           <div className="lg:col-span-6">
-            <div className="relative rounded-2xl overflow-hidden aspect-[4/3] sm:aspect-[16/10] bg-[#9e5c24] flex items-center justify-center shadow-sm">
+            <div className="relative rounded-2xl overflow-hidden aspect-[4/3] sm:aspect-[16/10] bg-neutral-100 flex items-center justify-center shadow-sm border border-neutral-300/80 group">
               <img
                 src="/assets/images/aloka-commission.jpg"
                 alt="Agricultural Commodity Trading"
-                className="absolute inset-0 w-full h-full object-cover mix-blend-multiply opacity-80 hover:scale-105 transition-transform duration-500"
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 loading="lazy"
               />
-              <div className="relative z-10 p-4 rounded-xl bg-black/25 backdrop-blur-[2px] border border-white/20">
-                <TradeArrowsIcon className="w-16 h-16 text-white" />
+              <div className="relative z-10 p-3.5 rounded-xl bg-white/90 backdrop-blur-xs border border-white/60 shadow-xs">
+                <TradeArrowsIcon className="w-12 h-12 text-[#9e5c24]" />
               </div>
-              <span className="absolute bottom-4 left-5 z-10 text-xs font-mono font-medium text-white/95 tracking-wider uppercase bg-black/35 px-2.5 py-1 rounded-xs backdrop-blur-xs">
-                PHOTO: ALOKA-COMMISSION.JPG
-              </span>
             </div>
           </div>
         </div>
 
         {/* Entity 2: ALOKA Agro Services */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-          {/* Left Visual Card with HD Photo */}
+          {/* Left Visual Card with Clear HD Photo */}
           <div className="lg:col-span-6 order-2 lg:order-1">
-            <div className="relative rounded-2xl overflow-hidden aspect-[4/3] sm:aspect-[16/10] bg-[#284e5a] flex items-center justify-center shadow-sm">
+            <div className="relative rounded-2xl overflow-hidden aspect-[4/3] sm:aspect-[16/10] bg-neutral-100 flex items-center justify-center shadow-sm border border-neutral-300/80 group">
               <img
                 src="/assets/images/aloka-agro-services.jpg"
                 alt="Agricultural Equipment and Services"
-                className="absolute inset-0 w-full h-full object-cover mix-blend-multiply opacity-80 hover:scale-105 transition-transform duration-500"
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 loading="lazy"
               />
-              <div className="relative z-10 p-4 rounded-xl bg-black/25 backdrop-blur-[2px] border border-white/20">
-                <AgroServicesIcon className="w-16 h-16 text-white" />
+              <div className="relative z-10 p-3.5 rounded-xl bg-white/90 backdrop-blur-xs border border-white/60 shadow-xs">
+                <AgroServicesIcon className="w-12 h-12 text-[#284e5a]" />
               </div>
-              <span className="absolute bottom-4 left-5 z-10 text-xs font-mono font-medium text-white/95 tracking-wider uppercase bg-black/35 px-2.5 py-1 rounded-xs backdrop-blur-xs">
-                PHOTO: ALOKA-AGRO-SERVICES.JPG
-              </span>
             </div>
           </div>
 

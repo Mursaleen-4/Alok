@@ -61,21 +61,18 @@ export default function Sustainability() {
             </div>
           </div>
 
-          {/* Right Visual Card with HD Biochar Photo */}
+          {/* Right Visual Card with Clear HD Biochar Photo */}
           <div className="lg:col-span-6">
-            <div className="relative rounded-2xl overflow-hidden aspect-[4/3] sm:aspect-[16/10] bg-[#232724] flex items-center justify-center shadow-sm">
+            <div className="relative rounded-2xl overflow-hidden aspect-[4/3] sm:aspect-[16/10] border border-neutral-300/80 shadow-sm bg-neutral-100 group">
               <img
                 src="/assets/images/biochar.jpg"
                 alt="Biochar for carbon sequestration"
-                className="absolute inset-0 w-full h-full object-cover mix-blend-multiply opacity-80 hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 loading="lazy"
               />
-              <div className="relative z-10 p-4 rounded-xl bg-black/30 backdrop-blur-[2px] border border-white/20">
-                <LeafIcon className="w-16 h-16 text-white" />
+              <div className="absolute top-4 right-4 z-10 p-2.5 rounded-lg bg-white/90 backdrop-blur-xs border border-white/60 shadow-xs">
+                <LeafIcon className="w-6 h-6 text-[#173824]" />
               </div>
-              <span className="absolute bottom-4 left-5 z-10 text-xs font-mono font-medium text-white/95 tracking-wider uppercase bg-black/40 px-2.5 py-1 rounded-xs backdrop-blur-xs">
-                PHOTO: BIOCHAR.JPG
-              </span>
             </div>
           </div>
 

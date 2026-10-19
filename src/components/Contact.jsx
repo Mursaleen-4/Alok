@@ -13,6 +13,7 @@ export default function Contact({ prefilledSubject = '' }) {
   const [submitted, setSubmitted] = useState(false);
   const [copiedField, setCopiedField] = useState(null);
   const [activeFacility, setActiveFacility] = useState('tando-adam');
+  const [mapViewMode, setMapViewMode] = useState('picture');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -120,15 +121,16 @@ export default function Contact({ prefilledSubject = '' }) {
               </div>
             </div>
 
-            {/* Interactive Map Embed Placeholder with authentic coordinates */}
-            <div className="rounded-xl border border-neutral-300 bg-white/70 overflow-hidden shadow-xs">
-              <div className="flex border-b border-neutral-200 bg-neutral-100/70 text-xs font-medium">
+            {/* Exact Map Location with Picture in Placeholder */}
+            <div className="rounded-xl border border-neutral-300 bg-white overflow-hidden shadow-xs">
+              {/* Facility switcher tabs */}
+              <div className="flex border-b border-neutral-200 bg-neutral-100/80 text-xs font-semibold">
                 <button
                   type="button"
                   onClick={() => setActiveFacility('tando-adam')}
-                  className={`flex-1 py-2.5 px-4 text-center transition-colors ${
+                  className={`flex-1 py-3 px-4 text-center transition-colors cursor-pointer ${
                     activeFacility === 'tando-adam'
-                      ? 'bg-white text-[#173824] font-bold border-b-2 border-[#173824]'
+                      ? 'bg-white text-[#173824] border-b-2 border-[#173824]'
                       : 'text-neutral-600 hover:text-neutral-900'
                   }`}
                 >
@@ -137,9 +139,9 @@ export default function Contact({ prefilledSubject = '' }) {
                 <button
                   type="button"
                   onClick={() => setActiveFacility('port-qasim')}
-                  className={`flex-1 py-2.5 px-4 text-center transition-colors ${
+                  className={`flex-1 py-3 px-4 text-center transition-colors cursor-pointer ${
                     activeFacility === 'port-qasim'
-                      ? 'bg-white text-[#173824] font-bold border-b-2 border-[#173824]'
+                      ? 'bg-white text-[#173824] border-b-2 border-[#173824]'
                       : 'text-neutral-600 hover:text-neutral-900'
                   }`}
                 >
@@ -147,46 +149,85 @@ export default function Contact({ prefilledSubject = '' }) {
                 </button>
               </div>
 
-              <div className="p-6 text-center space-y-3">
-                {activeFacility === 'tando-adam' ? (
-                  <>
-                    <div className="inline-flex p-3 rounded-full bg-[#173824]/10 text-[#173824]">
-                      <MapPin className="w-6 h-6" />
-                    </div>
-                    <h4 className="font-serif text-lg font-bold text-neutral-900">
-                      Tando Adam Industrial Complex
-                    </h4>
-                    <p className="text-xs sm:text-sm text-neutral-600 max-w-sm mx-auto">
-                      Jhol Road, Tando Adam, Sindh
-                      <br />
-                      Houses Cotton Ginning, Oil Mill, Rice Milling, Feed Pellets & Biochar.
-                    </p>
-                    <div className="pt-2 text-xs font-mono text-neutral-500">
-                      Coordinates: 25.768° N, 68.662° E · Sindh, Pakistan
-                    </div>
-                  </>
+              {/* View mode toggle (Map Picture vs Live Google Map) */}
+              <div className="flex items-center justify-between px-4 py-2.5 bg-neutral-50 border-b border-neutral-200 text-xs">
+                <span className="font-medium text-neutral-700 truncate pr-2">
+                  {activeFacility === 'tando-adam' ? 'Jhol Road, Tando Adam, Sindh' : 'Port Qasim Industrial Area, Karachi'}
+                </span>
+                <div className="flex items-center gap-1.5 shrink-0">
+                  <button
+                    type="button"
+                    onClick={() => setMapViewMode('picture')}
+                    className={`px-2.5 py-1 rounded text-[11px] font-semibold transition-colors cursor-pointer ${
+                      mapViewMode === 'picture'
+                        ? 'bg-[#173824] text-white'
+                        : 'bg-white text-neutral-700 border border-neutral-300 hover:bg-neutral-100'
+                    }`}
+                  >
+                    Map Picture
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setMapViewMode('interactive')}
+                    className={`px-2.5 py-1 rounded text-[11px] font-semibold transition-colors cursor-pointer ${
+                      mapViewMode === 'interactive'
+                        ? 'bg-[#173824] text-white'
+                        : 'bg-white text-neutral-700 border border-neutral-300 hover:bg-neutral-100'
+                    }`}
+                  >
+                    Live Google Map
+                  </button>
+                </div>
+              </div>
+
+              {/* Map Display: Exact Picture or Live Map */}
+              <div className="relative w-full h-72 sm:h-80 bg-neutral-100 overflow-hidden">
+                {mapViewMode === 'picture' ? (
+                  <div className="w-full h-full relative group">
+                    <img
+                      src={activeFacility === 'tando-adam' ? '/assets/images/map-tando-adam.svg' : '/assets/images/map-port-qasim.svg'}
+                      alt={activeFacility === 'tando-adam' ? 'Map of Alok Agro Industries on Jhol Road, Tando Adam' : 'Map of Port Qasim Rice Polishing Unit'}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                    <a
+                      href={activeFacility === 'tando-adam' 
+                        ? 'https://maps.google.com/?q=25.7680,68.6620+(Alok+Agro+Industries+Tando+Adam)' 
+                        : 'https://maps.google.com/?q=24.7830,67.3480+(Alok+Agro+Port+Qasim)'}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="absolute bottom-3 right-3 bg-white/95 hover:bg-white text-neutral-900 text-xs font-semibold px-3 py-1.5 rounded-md shadow-sm border border-neutral-300 flex items-center gap-1.5 transition-colors"
+                    >
+                      <span>Open Directions</span>
+                      <ExternalLink className="w-3.5 h-3.5 text-[#173824]" />
+                    </a>
+                  </div>
                 ) : (
-                  <>
-                    <div className="inline-flex p-3 rounded-full bg-[#284e5a]/10 text-[#284e5a]">
-                      <MapPin className="w-6 h-6" />
-                    </div>
-                    <h4 className="font-serif text-lg font-bold text-neutral-900">
-                      Port Qasim Rice Polishing Unit
-                    </h4>
-                    <p className="text-xs sm:text-sm text-neutral-600 max-w-sm mx-auto">
-                      Port Qasim Industrial Area, Karachi, Sindh
-                      <br />
-                      Capacity 240 tons per day for export shipping & containerized logistics.
-                    </p>
-                    <div className="pt-2 text-xs font-mono text-neutral-500">
-                      Coordinates: 24.783° N, 67.348° E · Karachi Port Vicinity
-                    </div>
-                  </>
+                  <iframe
+                    title={activeFacility === 'tando-adam' ? 'Google Maps - Tando Adam' : 'Google Maps - Port Qasim'}
+                    src={activeFacility === 'tando-adam'
+                      ? 'https://maps.google.com/maps?q=Jhol+Road,+Tando+Adam,+Sindh,+Pakistan&t=&z=14&ie=UTF8&iwloc=&output=embed'
+                      : 'https://maps.google.com/maps?q=Port+Qasim+Industrial+Area,+Karachi,+Pakistan&t=&z=14&ie=UTF8&iwloc=&output=embed'}
+                    className="w-full h-full border-0"
+                    loading="lazy"
+                  />
                 )}
-                <div className="pt-2">
-                  <span className="text-[11px] font-mono text-neutral-400">
-                    [Map embed placeholder - Coordinates verified]
-                  </span>
+              </div>
+
+              {/* Facility Details Bar */}
+              <div className="p-4 bg-white border-t border-neutral-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
+                <div>
+                  <h4 className="font-semibold text-neutral-900 text-sm">
+                    {activeFacility === 'tando-adam' ? 'Tando Adam Industrial Complex' : 'Port Qasim Rice Polishing Facility'}
+                  </h4>
+                  <p className="text-neutral-600 mt-0.5">
+                    {activeFacility === 'tando-adam'
+                      ? 'Cotton Ginning, Oil Mill, Rice Milling, Feed Pellets & Biochar'
+                      : 'Export grade polishing, grading & containerized logistics (240 T/day)'}
+                  </p>
+                </div>
+                <div className="shrink-0 text-neutral-500 font-mono text-[11px] bg-neutral-100 px-2.5 py-1.5 rounded-md border border-neutral-200">
+                  {activeFacility === 'tando-adam' ? '25.768° N, 68.662° E' : '24.783° N, 67.348° E'}
                 </div>
               </div>
             </div>

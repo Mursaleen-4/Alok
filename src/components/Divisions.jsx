@@ -17,7 +17,7 @@ export default function Divisions({ onSelectDivision }) {
       badge: '200 bales per day',
       color: '#5f7d6a',
       image: '/assets/images/cotton-ginning.jpg',
-      photoLabel: 'PHOTO: COTTON-GINNING.JPG',
+
       icon: CottonIcon,
       details: {
         established: '2015',
@@ -32,7 +32,6 @@ export default function Divisions({ onSelectDivision }) {
       badge: 'Oil 1,000 kg/day · Oil cake 30 tons/day',
       color: '#b28731',
       image: '/assets/images/oil-mill.jpg',
-      photoLabel: 'PHOTO: OIL-MILL.JPG',
       icon: OilDropIcon,
       details: {
         established: '2015',
@@ -47,7 +46,6 @@ export default function Divisions({ onSelectDivision }) {
       badge: '140 MT per day',
       color: '#9c8b5e',
       image: '/assets/images/rice-mill.jpg',
-      photoLabel: 'PHOTO: RICE-MILL.JPG',
       icon: RiceStalkIcon,
       details: {
         variety: 'IRRI-6 Long Grain Rice',
@@ -62,7 +60,6 @@ export default function Divisions({ onSelectDivision }) {
       badge: '240 tons per day',
       color: '#8e8055',
       image: '/assets/images/rice-polishing.jpg',
-      photoLabel: 'PHOTO: RICE-POLISHING.JPG',
       icon: PolishingIcon,
       details: {
         location: 'Port Qasim Industrial Area, Karachi',
@@ -77,7 +74,6 @@ export default function Divisions({ onSelectDivision }) {
       badge: '10 MT per day',
       color: '#4e6538',
       image: '/assets/images/feed-mill.jpg',
-      photoLabel: 'PHOTO: FEED-MILL.JPG',
       icon: FeedPelletsIcon,
       details: {
         capacity: '10 MT per day',
@@ -91,7 +87,6 @@ export default function Divisions({ onSelectDivision }) {
       badge: '1 MT/day, scaling to 5 tons/day',
       color: '#232724',
       image: '/assets/images/biochar.jpg',
-      photoLabel: 'PHOTO: BIOCHAR.JPG',
       icon: LeafIcon,
       details: {
         started: '2026',
@@ -126,24 +121,17 @@ export default function Divisions({ onSelectDivision }) {
                 key={div.id}
                 className="bg-white rounded-2xl overflow-hidden border border-neutral-200/80 shadow-sm flex flex-col justify-between transition-all duration-200 hover:shadow-md"
               >
-                {/* Visual Block with muted color tone, HD photograph, minimalist icon, and photo caption */}
-                <div
-                  className="relative h-48 sm:h-52 w-full flex items-center justify-center overflow-hidden transition-colors"
-                  style={{ backgroundColor: div.color }}
-                >
+                {/* Visual Block with HD photograph and minimalist icon badge */}
+                <div className="relative h-48 sm:h-52 w-full flex items-center justify-center overflow-hidden bg-neutral-100 group">
                   <img
                     src={div.image}
                     alt={div.title}
-                    className="absolute inset-0 w-full h-full object-cover mix-blend-multiply opacity-80 hover:scale-105 transition-transform duration-500"
+                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                   />
-                  <div className="relative z-10 p-3 rounded-xl bg-black/20 backdrop-blur-[2px] border border-white/20">
-                    <IconComponent className="w-11 h-11 text-white" />
+                  <div className="relative z-10 p-2.5 rounded-xl bg-white/90 backdrop-blur-xs border border-white/60 shadow-xs">
+                    <IconComponent className="w-8 h-8 text-[#173824]" />
                   </div>
-                  {/* Bottom caption matching client mockup: PHOTO: FILENAME.JPG */}
-                  <span className="absolute bottom-3 left-4 z-10 text-[10px] sm:text-xs font-mono font-medium text-white/90 tracking-wider uppercase bg-black/35 px-2 py-0.5 rounded-xs backdrop-blur-xs">
-                    {div.photoLabel}
-                  </span>
                 </div>
 
                 {/* Card Body */}
