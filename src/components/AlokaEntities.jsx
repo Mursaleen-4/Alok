@@ -81,13 +81,19 @@ export default function AlokaEntities({ onSelectCommodity }) {
             </div>
           </div>
 
-          {/* Right Visual Card */}
+          {/* Right Visual Card with HD Photo */}
           <div className="lg:col-span-6">
             <div className="relative rounded-2xl overflow-hidden aspect-[4/3] sm:aspect-[16/10] bg-[#9e5c24] flex items-center justify-center shadow-sm">
-              <div className="transform transition-transform hover:scale-105 duration-200">
-                <TradeArrowsIcon className="w-20 h-20 text-white/95" />
+              <img
+                src="/assets/images/aloka-commission.jpg"
+                alt="Agricultural Commodity Trading"
+                className="absolute inset-0 w-full h-full object-cover mix-blend-multiply opacity-80 hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+              <div className="relative z-10 p-4 rounded-xl bg-black/25 backdrop-blur-[2px] border border-white/20">
+                <TradeArrowsIcon className="w-16 h-16 text-white" />
               </div>
-              <span className="absolute bottom-4 left-5 text-xs font-mono font-medium text-white/75 tracking-wider uppercase">
+              <span className="absolute bottom-4 left-5 z-10 text-xs font-mono font-medium text-white/95 tracking-wider uppercase bg-black/35 px-2.5 py-1 rounded-xs backdrop-blur-xs">
                 PHOTO: ALOKA-COMMISSION.JPG
               </span>
             </div>
@@ -96,13 +102,19 @@ export default function AlokaEntities({ onSelectCommodity }) {
 
         {/* Entity 2: ALOKA Agro Services */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-          {/* Left Visual Card */}
+          {/* Left Visual Card with HD Photo */}
           <div className="lg:col-span-6 order-2 lg:order-1">
             <div className="relative rounded-2xl overflow-hidden aspect-[4/3] sm:aspect-[16/10] bg-[#284e5a] flex items-center justify-center shadow-sm">
-              <div className="transform transition-transform hover:scale-105 duration-200">
-                <AgroServicesIcon className="w-20 h-20 text-white/95" />
+              <img
+                src="/assets/images/aloka-agro-services.jpg"
+                alt="Agricultural Equipment and Services"
+                className="absolute inset-0 w-full h-full object-cover mix-blend-multiply opacity-80 hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+              <div className="relative z-10 p-4 rounded-xl bg-black/25 backdrop-blur-[2px] border border-white/20">
+                <AgroServicesIcon className="w-16 h-16 text-white" />
               </div>
-              <span className="absolute bottom-4 left-5 text-xs font-mono font-medium text-white/75 tracking-wider uppercase">
+              <span className="absolute bottom-4 left-5 z-10 text-xs font-mono font-medium text-white/95 tracking-wider uppercase bg-black/35 px-2.5 py-1 rounded-xs backdrop-blur-xs">
                 PHOTO: ALOKA-AGRO-SERVICES.JPG
               </span>
             </div>

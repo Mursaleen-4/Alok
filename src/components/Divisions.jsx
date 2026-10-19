@@ -16,6 +16,7 @@ export default function Divisions({ onSelectDivision }) {
       description: 'Ginning of raw cotton into lint and seed, one of our founding operations.',
       badge: '200 bales per day',
       color: '#5f7d6a',
+      image: '/assets/images/cotton-ginning.jpg',
       photoLabel: 'PHOTO: COTTON-GINNING.JPG',
       icon: CottonIcon,
       details: {
@@ -30,6 +31,7 @@ export default function Divisions({ onSelectDivision }) {
       description: 'Edible oil extraction with oil cake produced as a by-product for feed use.',
       badge: 'Oil 1,000 kg/day · Oil cake 30 tons/day',
       color: '#b28731',
+      image: '/assets/images/oil-mill.jpg',
       photoLabel: 'PHOTO: OIL-MILL.JPG',
       icon: OilDropIcon,
       details: {
@@ -44,6 +46,7 @@ export default function Divisions({ onSelectDivision }) {
       description: 'Milling of IRRI-6 rice.',
       badge: '140 MT per day',
       color: '#9c8b5e',
+      image: '/assets/images/rice-mill.jpg',
       photoLabel: 'PHOTO: RICE-MILL.JPG',
       icon: RiceStalkIcon,
       details: {
@@ -58,6 +61,7 @@ export default function Divisions({ onSelectDivision }) {
       description: 'Located at Port Qasim Industrial Area.',
       badge: '240 tons per day',
       color: '#8e8055',
+      image: '/assets/images/rice-polishing.jpg',
       photoLabel: 'PHOTO: RICE-POLISHING.JPG',
       icon: PolishingIcon,
       details: {
@@ -72,6 +76,7 @@ export default function Divisions({ onSelectDivision }) {
       description: 'Dairy feed pellets for livestock and dairy farms.',
       badge: '10 MT per day',
       color: '#4e6538',
+      image: '/assets/images/feed-mill.jpg',
       photoLabel: 'PHOTO: FEED-MILL.JPG',
       icon: FeedPelletsIcon,
       details: {
@@ -85,6 +90,7 @@ export default function Divisions({ onSelectDivision }) {
       description: 'Started in 2026 for carbon sequestration and ESG commitments.',
       badge: '1 MT/day, scaling to 5 tons/day',
       color: '#232724',
+      image: '/assets/images/biochar.jpg',
       photoLabel: 'PHOTO: BIOCHAR.JPG',
       icon: LeafIcon,
       details: {
@@ -120,16 +126,22 @@ export default function Divisions({ onSelectDivision }) {
                 key={div.id}
                 className="bg-white rounded-2xl overflow-hidden border border-neutral-200/80 shadow-sm flex flex-col justify-between transition-all duration-200 hover:shadow-md"
               >
-                {/* Visual Block with muted color tone, minimalist icon, and photo caption */}
+                {/* Visual Block with muted color tone, HD photograph, minimalist icon, and photo caption */}
                 <div
-                  className="relative h-48 sm:h-52 w-full flex items-center justify-center transition-colors"
+                  className="relative h-48 sm:h-52 w-full flex items-center justify-center overflow-hidden transition-colors"
                   style={{ backgroundColor: div.color }}
                 >
-                  <div className="transform transition-transform hover:scale-105 duration-200">
-                    <IconComponent className="w-14 h-14 text-white/95" />
+                  <img
+                    src={div.image}
+                    alt={div.title}
+                    className="absolute inset-0 w-full h-full object-cover mix-blend-multiply opacity-80 hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                  <div className="relative z-10 p-3 rounded-xl bg-black/20 backdrop-blur-[2px] border border-white/20">
+                    <IconComponent className="w-11 h-11 text-white" />
                   </div>
                   {/* Bottom caption matching client mockup: PHOTO: FILENAME.JPG */}
-                  <span className="absolute bottom-3 left-4 text-[10px] sm:text-xs font-mono font-medium text-white/75 tracking-wider uppercase">
+                  <span className="absolute bottom-3 left-4 z-10 text-[10px] sm:text-xs font-mono font-medium text-white/90 tracking-wider uppercase bg-black/35 px-2 py-0.5 rounded-xs backdrop-blur-xs">
                     {div.photoLabel}
                   </span>
                 </div>

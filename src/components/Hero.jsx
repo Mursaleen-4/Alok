@@ -2,16 +2,18 @@ import React, { useState } from 'react';
 import { ArrowDown, Eye, Image as ImageIcon } from 'lucide-react';
 
 export default function Hero() {
-  const [showPhotoTexture, setShowPhotoTexture] = useState(false);
-
   return (
     <section 
-      className="relative text-white py-20 sm:py-28 lg:py-32 overflow-hidden"
-      style={{
-        backgroundColor: '#173824',
-        backgroundImage: 'repeating-linear-gradient(45deg, #173824, #173824 20px, #1a3f29 20px, #1a3f29 22px)'
-      }}
+      className="relative text-white py-20 sm:py-28 lg:py-32 overflow-hidden bg-[#173824]"
     >
+      {/* Background HD Image with authentic forest green overlay (no gradients) */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/assets/images/hero.jpg')" }}
+      />
+      {/* Solid deep forest green color wash for high contrast and color scheme match */}
+      <div className="absolute inset-0 bg-[#173824]/88 backdrop-brightness-95" />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-3xl">
           {/* Location Kicker */}
@@ -27,7 +29,7 @@ export default function Hero() {
           </h1>
 
           {/* Subtitle */}
-          <p className="text-base sm:text-lg lg:text-xl text-neutral-200/90 leading-relaxed max-w-2xl mb-8 font-normal">
+          <p className="text-base sm:text-lg lg:text-xl text-neutral-200/95 leading-relaxed max-w-2xl mb-8 font-normal">
             From cotton ginning and rice milling to dairy feed and biochar, Alok Agro Industries has been growing since 2015.
           </p>
 
@@ -49,6 +51,9 @@ export default function Hero() {
 
           {/* Hero image slot label matching mockup */}
           <div className="pt-4 border-t border-white/15 inline-block">
+            <p className="text-xs font-mono text-neutral-300/80 tracking-wide">
+              Active backdrop: /assets/images/hero.jpg
+            </p>
           </div>
         </div>
       </div>
