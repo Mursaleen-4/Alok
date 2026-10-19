@@ -121,16 +121,16 @@ export default function Divisions({ onSelectDivision }) {
                 key={div.id}
                 className="bg-white rounded-2xl overflow-hidden border border-neutral-200/80 shadow-sm flex flex-col justify-between transition-all duration-200 hover:shadow-md"
               >
-                {/* Visual Block with HD photograph and minimalist icon badge */}
-                <div className="relative h-48 sm:h-52 w-full flex items-center justify-center overflow-hidden bg-neutral-100 group">
+                {/* Visual Block with HD photograph and top-right icon badge */}
+                <div className="relative h-48 sm:h-52 w-full overflow-hidden bg-neutral-100 group">
                   <img
                     src={div.image}
                     alt={div.title}
-                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                   />
-                  <div className="relative z-10 p-2.5 rounded-xl bg-white/90 backdrop-blur-xs border border-white/60 shadow-xs">
-                    <IconComponent className="w-8 h-8 text-[#173824]" />
+                  <div className="absolute top-3 right-3 z-10 p-2 rounded-lg bg-white/90 backdrop-blur-xs border border-white/60 shadow-xs">
+                    <IconComponent className="w-5 h-5 text-[#173824]" />
                   </div>
                 </div>
 
