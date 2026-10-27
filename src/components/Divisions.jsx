@@ -38,7 +38,7 @@ export default function Divisions({ onSelectDivision }) {
       description: 'Ginning of raw cotton into lint and seed, one of our founding operations.',
       badge: '200 bales per day',
       color: '#5f7d6a',
-      image: '/assets/images/cotton-ginning.jpg',
+      image: '/assets/images/cotton-ginning.jpeg',
       icon: CottonIcon,
       specs: [
         { label: 'Established', value: '2011 (Founding Unit)' },
