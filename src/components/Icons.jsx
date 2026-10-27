@@ -79,3 +79,37 @@ export const AgroServicesIcon = ({ className = "w-12 h-12 text-white" }) => (
     <line x1="10" y1="48" x2="54" y2="48" />
   </svg>
 );
+
+// Soil Sprout Icon for Organic Carbon Enhancer for Soil
+export const SoilSproutIcon = ({ className = "w-6 h-6 text-[#173824]" }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M7 20h10" />
+    <path d="M12 20v-8" />
+    <path d="M12 12c-3-3-3-7 0-9 3 2 3 6 0 9z" />
+    <path d="M12 16c2-1 4-1 6 0" />
+    <path d="M12 14c-2-1-4-1-6 0" />
+  </svg>
+);
+
+// Dairy Cow / Bovine Icon for Organic Carbon Enhancer for Dairy
+export const DairyCowIcon = ({ className = "w-6 h-6 text-[#b28731]" }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M4 14c0 3 2 5 5 5h6c3 0 5-2 5-5V9l-2-2-1 1-3-1-3 1-1-1-2 2v5z" />
+    <path d="M8 19v2" />
+    <path d="M16 19v2" />
+    <circle cx="9" cy="13" r="1" fill="currentColor" />
+    <circle cx="15" cy="13" r="1" fill="currentColor" />
+  </svg>
+);
+
+// Poultry Bird Icon for Organic Carbon Enhancer for Poultry
+export const PoultryBirdIcon = ({ className = "w-6 h-6 text-[#284e5a]" }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M4 18c2-3 5-5 8-5 2 0 4 1 5 3" />
+    <path d="M16 8a4 4 0 0 0-4-4c-2 0-3 1-4 3l-4 3 4 2c1 3 3 5 6 5a7 7 0 0 0 5-2" />
+    <path d="M18 10l3-1-2 3" />
+    <circle cx="13" cy="7" r="1" fill="currentColor" />
+    <path d="M10 21v-3" />
+    <path d="M14 21v-3" />
+  </svg>
+);

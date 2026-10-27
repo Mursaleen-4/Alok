@@ -30,7 +30,7 @@ export default function Hero() {
 
           {/* Subtitle */}
           <p className="text-base sm:text-lg lg:text-xl text-neutral-200/95 leading-relaxed max-w-2xl mb-8 font-normal">
-            From cotton ginning and rice milling to dairy feed and biochar, Alok Agro Industries has been growing since 2015.
+            From cotton ginning and rice milling to dairy feed and biochar, Alok Agro Industries has been growing since 2011.
           </p>
 
           {/* Action Buttons (Strictly rectangular with rounded-md, no pill shapes) */}

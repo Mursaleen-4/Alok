@@ -21,6 +21,15 @@ export default function App() {
     }
   };
 
+  const handleSelectProduct = (productName) => {
+    setSelectedCommodity(productName);
+    // Smooth scroll to contact
+    const contactElem = document.querySelector('#contact');
+    if (contactElem) {
+      contactElem.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-[#f3efe6] flex flex-col selection:bg-[#cf9338] selection:text-white">
       {/* Top Navigation */}
@@ -44,7 +53,7 @@ export default function App() {
         <AlokaEntities onSelectCommodity={handleSelectCommodity} />
 
         {/* Sustainability & Biochar Carbon Sequestration */}
-        <Sustainability />
+        <Sustainability onSelectProduct={handleSelectProduct} />
 
         {/* Contact Information & Inquiry Form */}
         <Contact prefilledSubject={selectedCommodity} />

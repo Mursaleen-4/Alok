@@ -15,6 +15,12 @@ export default function Contact({ prefilledSubject = '' }) {
   const [activeFacility, setActiveFacility] = useState('tando-adam');
   const [mapViewMode, setMapViewMode] = useState('picture');
 
+  React.useEffect(() => {
+    if (prefilledSubject) {
+      setFormData((prev) => ({ ...prev, division: prefilledSubject }));
+    }
+  }, [prefilledSubject]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.message) {
@@ -316,6 +322,9 @@ export default function Contact({ prefilledSubject = '' }) {
                       className="w-full px-4 py-3 rounded-lg border border-neutral-300 text-neutral-800 focus:outline-none focus:ring-2 focus:ring-[#cf9338] focus:border-transparent text-sm bg-white"
                     >
                       <option value="General Inquiry">General Inquiry</option>
+                      <option value="Organic Carbon Enhancer for Soil">ALOKA Carbonon — Organic Carbon Enhancer for Soil</option>
+                      <option value="Organic Carbon Enhancer for Dairy">ALOKA Carbonon — Organic Carbon Enhancer for Dairy</option>
+                      <option value="Organic Carbon Enhancer for Poultry">ALOKA Carbonon — Organic Carbon Enhancer for Poultry</option>
                       <option value="Cotton Ginning (200 bales/day)">Cotton Ginning (200 bales/day)</option>
                       <option value="Oil Mill (1000 kg oil, 30 tons cake/day)">Oil Mill (1000 kg oil, 30 tons cake/day)</option>
                       <option value="Rice Mill (IRRI-6, 140 MT/day)">Rice Mill (IRRI-6, 140 MT/day)</option>

@@ -3,7 +3,7 @@
 Official website for **Alok Agro Industries** - Processing, trading, and services for Pakistan's agriculture.
 
 ## About the Company
-ALOK AGRO Industries started in 2015 as a cotton ginning factory and oil mills in Tando Adam, Sindh. The group expanded to include an IRRI-6 rice mill and a high-capacity rice polishing facility at Port Qasim Industrial Area, Karachi. In 2026, the company commenced biochar production supporting ESG criteria and carbon sequestration.
+ALOK AGRO Industries started in 2011 as a cotton ginning factory and oil mills in Tando Adam, Sindh. The group expanded to include an IRRI-6 rice mill and a high-capacity rice polishing facility at Port Qasim Industrial Area, Karachi. In 2026, the company commenced biochar production supporting ESG criteria and carbon sequestration.
 
 ### Operational Capacities
 - **Cotton Ginning Factory**: 200 bales per day (Tando Adam)

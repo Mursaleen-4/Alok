@@ -3,7 +3,7 @@ import React from 'react';
 export default function About() {
   const milestones = [
     {
-      year: '2015',
+      year: '2011',
       description: 'Cotton ginning factory and oil mill begin operations.',
     },
     {
@@ -32,7 +32,7 @@ export default function About() {
             Built on cotton, grown into a full agro group
           </h2>
           <p className="text-neutral-700 text-base sm:text-lg leading-relaxed">
-            Alok Agro Industries started in 2015 as a cotton ginning factory and oil mill. We later added a rice mill processing IRRI-6 rice, and a rice polishing unit at Port Qasim Industrial Area. In 2026 we began producing biochar for carbon sequestration.
+            Alok Agro Industries started in 2011 as a cotton ginning factory and oil mill. We later added a rice mill processing IRRI-6 rice, and a rice polishing unit at Port Qasim Industrial Area. In 2026 we began producing biochar for carbon sequestration.
           </p>
         </div>
 

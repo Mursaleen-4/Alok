@@ -20,7 +20,7 @@ export default function Divisions({ onSelectDivision }) {
 
       icon: CottonIcon,
       details: {
-        established: '2015',
+        established: '2011',
         location: 'Jhol Road, Tando Adam, Sindh',
         output: 'Premium raw cotton lint and quality seeds for edible oil extraction',
       }
@@ -34,7 +34,7 @@ export default function Divisions({ onSelectDivision }) {
       image: '/assets/images/oil-mill.jpg',
       icon: OilDropIcon,
       details: {
-        established: '2015',
+        established: '2011',
         location: 'Tando Adam Complex',
         output: 'Unrefined/refined edible oil and high-protein cotton seed oil cake',
       }
@@ -59,7 +59,7 @@ export default function Divisions({ onSelectDivision }) {
       description: 'Located at Port Qasim Industrial Area.',
       badge: '240 tons per day',
       color: '#8e8055',
-      image: '/assets/images/rice-polishing.jpg',
+      image: '/assets/images/rice-polishing.jpeg',
       icon: PolishingIcon,
       details: {
         location: 'Port Qasim Industrial Area, Karachi',
@@ -83,7 +83,7 @@ export default function Divisions({ onSelectDivision }) {
     {
       id: 'biochar',
       title: 'Biochar',
-      description: 'Started in 2026 for carbon sequestration and ESG commitments.',
+      description: 'Started in 2026 for carbon sequestration. Produces Organic Carbon Enhancers for Soil, Dairy & Poultry.',
       badge: '1 MT/day, scaling to 5 tons/day',
       color: '#232724',
       image: '/assets/images/biochar.jpg',
