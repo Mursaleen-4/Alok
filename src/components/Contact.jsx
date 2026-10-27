@@ -42,7 +42,7 @@ export default function Contact({ prefilledSubject = '' }) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           
           {/* Left Column: Contact Information & Location Map */}
-          <div className="lg:col-span-6 space-y-8">
+          <div className="lg:col-span-6 space-y-8 reveal-on-scroll">
             <div>
               <span className="text-xs font-bold uppercase tracking-widest text-[#b87e28] block mb-2">
                 Contact
@@ -241,8 +241,8 @@ export default function Contact({ prefilledSubject = '' }) {
           </div>
 
           {/* Right Column: Contact Inquiry Form matching client mockup */}
-          <div className="lg:col-span-6 flex flex-col justify-start">
-            <div className="bg-white rounded-2xl p-7 sm:p-9 border border-neutral-200/90 shadow-sm">
+          <div className="lg:col-span-6 flex flex-col justify-start reveal-on-scroll delay-150">
+            <div className="bg-white rounded-2xl p-7 sm:p-9 border border-neutral-200/90 shadow-sm transition-all duration-300 hover:shadow-md">
               {submitted ? (
                 <div className="py-12 text-center space-y-4">
                   <div className="w-14 h-14 bg-emerald-100 text-emerald-800 rounded-full flex items-center justify-center mx-auto">
@@ -266,7 +266,7 @@ export default function Contact({ prefilledSubject = '' }) {
                         message: '',
                       });
                     }}
-                    className="mt-4 px-6 py-2.5 rounded-md text-sm font-semibold bg-[#edeae1] text-neutral-800 hover:bg-neutral-200 transition-colors"
+                    className="mt-4 px-6 py-2.5 rounded-md text-sm font-semibold bg-[#edeae1] text-neutral-800 hover:bg-neutral-200 transition-colors cursor-pointer"
                   >
                     Send another inquiry
                   </button>
@@ -282,7 +282,7 @@ export default function Contact({ prefilledSubject = '' }) {
                       placeholder="Your name"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-3.5 rounded-lg border border-neutral-300 text-neutral-900 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-[#cf9338] focus:border-transparent text-sm sm:text-base bg-white"
+                      className="w-full px-4 py-3.5 rounded-lg border border-neutral-300 text-neutral-900 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-[#cf9338] focus:border-transparent text-sm sm:text-base bg-white transition-all duration-200"
                     />
                   </div>
 
@@ -295,7 +295,7 @@ export default function Contact({ prefilledSubject = '' }) {
                       placeholder="Email"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-4 py-3.5 rounded-lg border border-neutral-300 text-neutral-900 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-[#cf9338] focus:border-transparent text-sm sm:text-base bg-white"
+                      className="w-full px-4 py-3.5 rounded-lg border border-neutral-300 text-neutral-900 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-[#cf9338] focus:border-transparent text-sm sm:text-base bg-white transition-all duration-200"
                     />
                   </div>
 
@@ -307,7 +307,7 @@ export default function Contact({ prefilledSubject = '' }) {
                       placeholder="Phone"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full px-4 py-3.5 rounded-lg border border-neutral-300 text-neutral-900 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-[#cf9338] focus:border-transparent text-sm sm:text-base bg-white"
+                      className="w-full px-4 py-3.5 rounded-lg border border-neutral-300 text-neutral-900 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-[#cf9338] focus:border-transparent text-sm sm:text-base bg-white transition-all duration-200"
                     />
                   </div>
 
@@ -319,7 +319,7 @@ export default function Contact({ prefilledSubject = '' }) {
                       id="division"
                       value={formData.division}
                       onChange={(e) => setFormData({ ...formData, division: e.target.value })}
-                      className="w-full px-4 py-3 rounded-lg border border-neutral-300 text-neutral-800 focus:outline-none focus:ring-2 focus:ring-[#cf9338] focus:border-transparent text-sm bg-white"
+                      className="w-full px-4 py-3 rounded-lg border border-neutral-300 text-neutral-800 focus:outline-none focus:ring-2 focus:ring-[#cf9338] focus:border-transparent text-sm bg-white transition-all duration-200 cursor-pointer"
                     >
                       <option value="General Inquiry">General Inquiry</option>
                       <option value="Organic Carbon Enhancer for Soil">ALOKA Carbonon — Organic Carbon Enhancer for Soil</option>
@@ -345,14 +345,14 @@ export default function Contact({ prefilledSubject = '' }) {
                       placeholder="How can we help?"
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full px-4 py-3.5 rounded-lg border border-neutral-300 text-neutral-900 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-[#cf9338] focus:border-transparent text-sm sm:text-base bg-white resize-y"
+                      className="w-full px-4 py-3.5 rounded-lg border border-neutral-300 text-neutral-900 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-[#cf9338] focus:border-transparent text-sm sm:text-base bg-white resize-y transition-all duration-200"
                     />
                   </div>
 
                   {/* Send message button strictly rectangular with rounded-md / rounded-lg (NEVER pill-shaped) */}
                   <button
                     type="submit"
-                    className="w-full py-4 px-6 rounded-lg bg-[#cf9338] hover:bg-[#b87e28] text-neutral-950 font-bold text-base transition-colors shadow-xs focus:ring-2 focus:ring-[#cf9338] focus:ring-offset-2"
+                    className="w-full py-4 px-6 rounded-lg bg-[#cf9338] hover:bg-[#b87e28] hover:-translate-y-0.5 active:translate-y-0 text-neutral-950 font-bold text-base transition-all duration-200 shadow-xs focus:ring-2 focus:ring-[#cf9338] focus:ring-offset-2 cursor-pointer"
                   >
                     Send message
                   </button>

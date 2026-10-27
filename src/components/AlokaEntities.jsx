@@ -29,7 +29,7 @@ export default function AlokaEntities({ onSelectCommodity }) {
         {/* Entity 1: ALOKA Commission */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Left Text Column */}
-          <div className="lg:col-span-6 space-y-6">
+          <div className="lg:col-span-6 space-y-6 reveal-on-scroll">
             <div>
               <span className="inline-block text-xs uppercase tracking-widest font-bold text-[#9e5c24] bg-[#9e5c24]/10 border border-[#9e5c24]/20 px-3 py-1.5 rounded-md mb-3">
                 Commodity Trading Division
@@ -56,10 +56,10 @@ export default function AlokaEntities({ onSelectCommodity }) {
                       key={item}
                       type="button"
                       onClick={() => handleCommodityClick(item)}
-                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors border ${
+                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 border cursor-pointer active:scale-95 ${
                         isSelected
-                          ? 'bg-[#9e5c24] text-white border-[#9e5c24]'
-                          : 'bg-white text-neutral-800 border-neutral-300 hover:border-neutral-400 hover:bg-neutral-50'
+                          ? 'bg-[#9e5c24] text-white border-[#9e5c24] shadow-xs'
+                          : 'bg-white text-neutral-800 border-neutral-300 hover:border-neutral-400 hover:bg-neutral-50 hover:-translate-y-0.5'
                       }`}
                     >
                       {item}
@@ -72,24 +72,24 @@ export default function AlokaEntities({ onSelectCommodity }) {
             <div className="pt-2">
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-[#9e5c24] hover:text-[#7d4619] transition-colors"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-[#9e5c24] hover:text-[#7d4619] transition-colors group"
               >
-                Inquire about commission trading
-                <ArrowRight className="w-4 h-4" />
+                <span>Inquire about commission trading</span>
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </a>
             </div>
           </div>
 
           {/* Right Visual Card with Clear HD Photo and Top-Right Logo Badge */}
-          <div className="lg:col-span-6">
+          <div className="lg:col-span-6 reveal-on-scroll delay-150">
             <div className="relative rounded-2xl overflow-hidden aspect-[4/3] sm:aspect-[16/10] bg-neutral-100 shadow-sm border border-neutral-300/80 group">
               <img
                 src="/assets/images/aloka-commission.jpg"
                 alt="Agricultural Commodity Trading"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
                 loading="lazy"
               />
-              <div className="absolute top-4 right-4 z-10 p-2.5 rounded-lg bg-white/90 backdrop-blur-xs border border-white/60 shadow-xs">
+              <div className="absolute top-4 right-4 z-10 p-2.5 rounded-lg bg-white/90 backdrop-blur-xs border border-white/60 shadow-xs transition-transform duration-300 group-hover:scale-105">
                 <TradeArrowsIcon className="w-6 h-6 text-[#9e5c24]" />
               </div>
             </div>
@@ -99,22 +99,22 @@ export default function AlokaEntities({ onSelectCommodity }) {
         {/* Entity 2: ALOKA Agro Services */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Left Visual Card with Clear HD Photo and Top-Right Logo Badge */}
-          <div className="lg:col-span-6 order-2 lg:order-1">
+          <div className="lg:col-span-6 order-2 lg:order-1 reveal-on-scroll delay-150">
             <div className="relative rounded-2xl overflow-hidden aspect-[4/3] sm:aspect-[16/10] bg-neutral-100 shadow-sm border border-neutral-300/80 group">
               <img
                 src="/assets/images/aloka-agro-services.jpg"
                 alt="Agricultural Equipment and Services"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
                 loading="lazy"
               />
-              <div className="absolute top-4 right-4 z-10 p-2.5 rounded-lg bg-white/90 backdrop-blur-xs border border-white/60 shadow-xs">
+              <div className="absolute top-4 right-4 z-10 p-2.5 rounded-lg bg-white/90 backdrop-blur-xs border border-white/60 shadow-xs transition-transform duration-300 group-hover:scale-105">
                 <AgroServicesIcon className="w-6 h-6 text-[#284e5a]" />
               </div>
             </div>
           </div>
 
           {/* Right Text Column */}
-          <div className="lg:col-span-6 order-1 lg:order-2 space-y-6">
+          <div className="lg:col-span-6 order-1 lg:order-2 space-y-6 reveal-on-scroll">
             <div>
               <span className="inline-block text-xs uppercase tracking-widest font-bold text-[#284e5a] bg-[#284e5a]/10 border border-[#284e5a]/20 px-3 py-1.5 rounded-md mb-3">
                 Agricultural Promotion & Industry Services
@@ -128,7 +128,7 @@ export default function AlokaEntities({ onSelectCommodity }) {
               Provides services to the agricultural industry and assists with its promotion.
             </p>
 
-            <div className="bg-white/80 border border-neutral-200/80 rounded-xl p-5 space-y-3">
+            <div className="bg-white/80 border border-neutral-200/80 rounded-xl p-5 space-y-3 hover:border-neutral-300 transition-colors">
               <h4 className="text-sm font-semibold uppercase tracking-wider text-neutral-800">
                 Primary Industry Services:
               </h4>
@@ -151,10 +151,10 @@ export default function AlokaEntities({ onSelectCommodity }) {
             <div className="pt-2">
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-[#284e5a] hover:text-[#1c3842] transition-colors"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-[#284e5a] hover:text-[#1c3842] transition-colors group"
               >
-                Connect with Agro Services team
-                <ArrowRight className="w-4 h-4" />
+                <span>Connect with Agro Services team</span>
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </a>
             </div>
           </div>

@@ -8,13 +8,25 @@ import AlokaEntities from './components/AlokaEntities';
 import Sustainability from './components/Sustainability';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import { useScrollReveal } from './hooks/useScrollReveal';
 
 export default function App() {
   const [selectedCommodity, setSelectedCommodity] = useState('');
 
+  // Activate subtle scroll-reveal observer across all sections
+  useScrollReveal();
+
   const handleSelectCommodity = (commodity) => {
     setSelectedCommodity(`ALOKA Commission - ${commodity}`);
     // Smooth scroll to contact
+    const contactElem = document.querySelector('#contact');
+    if (contactElem) {
+      contactElem.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleSelectDivision = (divisionTitle) => {
+    setSelectedCommodity(`Inquiry - ${divisionTitle}`);
     const contactElem = document.querySelector('#contact');
     if (contactElem) {
       contactElem.scrollIntoView({ behavior: 'smooth' });
@@ -47,7 +59,7 @@ export default function App() {
         <CapacityBanner />
 
         {/* Production Divisions (6 Units) */}
-        <Divisions />
+        <Divisions onSelectDivision={handleSelectDivision} />
 
         {/* Sister Entities: ALOKA Commission & ALOKA Agro Services */}
         <AlokaEntities onSelectCommodity={handleSelectCommodity} />
