@@ -25,17 +25,30 @@ export default function Navbar({ onNavigate }) {
     <header className="sticky top-0 z-50 bg-[#f3efe6]/95 backdrop-blur-sm border-b border-neutral-300/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
-          {/* Logo badge as designed in client mockup */}
+          {/* Official Company Logo */}
           <a
             href="#"
             onClick={(e) => {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
-            className="logo-badge hover:bg-white transition-colors"
+            className="flex items-center gap-2.5 sm:gap-3.5 group py-1"
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-[#173824]" />
-            <span>LOGO · ALOK AGRO INDUSTRIES</span>
+            <div className="h-11 sm:h-14 w-auto flex items-center justify-center bg-white/80 p-1 rounded-lg border border-neutral-200/80 shadow-xs">
+              <img
+                src="/assets/images/logo.jpeg"
+                alt="Alok Agro Industries Logo"
+                className="h-9 sm:h-12 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
+              />
+            </div>
+            <div className="flex flex-col justify-center">
+              <span className="font-serif font-black text-base sm:text-xl text-[#173824] leading-tight tracking-tight">
+                Alok Agro Industries
+              </span>
+              <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-widest text-[#cf9338]">
+                Tando Adam, Sindh
+              </span>
+            </div>
           </a>
 
           {/* Desktop Navigation */}

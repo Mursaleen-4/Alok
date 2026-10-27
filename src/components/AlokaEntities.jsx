@@ -31,10 +31,9 @@ export default function AlokaEntities({ onSelectCommodity }) {
           {/* Left Text Column */}
           <div className="lg:col-span-6 space-y-6">
             <div>
-              <div className="logo-badge mb-4">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#9e5c24]" />
-                <span>LOGO · ALOKA COMMISSION</span>
-              </div>
+              <span className="inline-block text-xs uppercase tracking-widest font-bold text-[#9e5c24] bg-[#9e5c24]/10 border border-[#9e5c24]/20 px-3 py-1.5 rounded-md mb-3">
+                Commodity Trading Division
+              </span>
               <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-black text-neutral-900 leading-tight">
                 ALOKA Commission
               </h2>
@@ -117,10 +116,9 @@ export default function AlokaEntities({ onSelectCommodity }) {
           {/* Right Text Column */}
           <div className="lg:col-span-6 order-1 lg:order-2 space-y-6">
             <div>
-              <div className="logo-badge mb-4">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#284e5a]" />
-                <span>LOGO · ALOKA AGRO SERVICES</span>
-              </div>
+              <span className="inline-block text-xs uppercase tracking-widest font-bold text-[#284e5a] bg-[#284e5a]/10 border border-[#284e5a]/20 px-3 py-1.5 rounded-md mb-3">
+                Agricultural Promotion & Industry Services
+              </span>
               <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-black text-neutral-900 leading-tight">
                 ALOKA Agro Services
               </h2>

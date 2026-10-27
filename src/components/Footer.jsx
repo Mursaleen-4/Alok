@@ -13,34 +13,30 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-start justify-between">
           
-          {/* Left Column: Branding, Location, Entity Badges, Copyright */}
-          <div className="md:col-span-8 space-y-5">
-            <div>
-              <h3 className="font-serif text-2xl sm:text-3xl font-black text-white tracking-tight">
-                Alok Agro Industries
-              </h3>
-              <p className="text-sm text-neutral-300 mt-1 font-normal">
-                Jhol Road, Tando Adam, Sindh
-              </p>
+          {/* Left Column: Official Logo, Branding, Location, Copyright */}
+          <div className="md:col-span-8 space-y-6">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+              <div className="bg-white p-2 rounded-xl border border-white/20 shadow-xs inline-flex items-center justify-center shrink-0">
+                <img
+                  src="/assets/images/logo.jpeg"
+                  alt="Alok Agro Industries Logo"
+                  className="h-14 sm:h-16 w-auto object-contain"
+                />
+              </div>
+              <div>
+                <h3 className="font-serif text-2xl sm:text-3xl font-black text-white tracking-tight">
+                  Alok Agro Industries
+                </h3>
+                <p className="text-sm text-neutral-300 mt-0.5 font-normal">
+                  Jhol Road, Tando Adam, Sindh
+                </p>
+                <p className="text-xs text-[#cf9338] font-medium tracking-wide mt-1">
+                  Processing, Trading & Agricultural Services
+                </p>
+              </div>
             </div>
 
-            {/* 3 Entity Logo Badges matching mockup */}
-            <div className="flex flex-wrap gap-2.5 pt-1">
-              <span className="logo-badge-dark">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#cf9338]" />
-                <span>LOGO · ALOK AGRO</span>
-              </span>
-              <span className="logo-badge-dark">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#9e5c24]" />
-                <span>LOGO · ALOKA COMMISSION</span>
-              </span>
-              <span className="logo-badge-dark">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#284e5a]" />
-                <span>LOGO · ALOKA AGRO SERVICES</span>
-              </span>
-            </div>
-
-            <div className="pt-4">
+            <div className="pt-2">
               <p className="text-xs text-neutral-400">
                 &copy; 2026 Alok Agro Industries. All rights reserved.
               </p>
